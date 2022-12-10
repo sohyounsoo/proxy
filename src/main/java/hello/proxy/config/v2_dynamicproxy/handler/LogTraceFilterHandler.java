@@ -36,6 +36,7 @@ public class LogTraceFilterHandler implements InvocationHandler {
 
             //target 호출
             Object result = method.invoke(target, args);
+
             logTrace.end(status);
             return result;
         } catch (Exception e) {
