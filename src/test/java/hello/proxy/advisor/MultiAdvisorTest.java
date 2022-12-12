@@ -11,7 +11,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.aop.Pointcut;
 import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.aop.support.DefaultPointcutAdvisor;
-import org.springframework.aop.support.NameMatchMethodPointcut;
 
 @Slf4j
 public class MultiAdvisorTest {
@@ -52,7 +51,6 @@ public class MultiAdvisorTest {
         proxyFactory1.addAdvisor(advisor2);
         proxyFactory1.addAdvisor(advisor1);
         ServiceInterface proxy = (ServiceInterface) proxyFactory1.getProxy();
-
 
         //실행
         proxy.save();
